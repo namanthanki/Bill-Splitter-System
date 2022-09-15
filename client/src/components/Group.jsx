@@ -25,7 +25,8 @@ const Group = () => {
         setGroupMembers([...groupMembers], [e.target.value] );
       }; 
 
-      const submitHandler = async () => {
+      const submitHandler = async (e) => {
+        e.preventDefault();
         console.log(groupMembers);
         const request = await fetch(`http://localhost:7803/api/group/create`, {
             method: "POST",
