@@ -1,4 +1,5 @@
 import User from "../models/user.model.js";
+import jwt from "jsonwebtoken";
 
 const loginController = async (req, res) => {
     const foundUser = await User.findOne({
